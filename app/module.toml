@@ -1,0 +1,41 @@
+version = 2
+
+[module]
+type = "android-app"
+name = "app"
+languageLevel = "JAVA_17"
+output = "build/codeassist/classes"
+
+[sourceSets.debug]
+scope = "IMPLEMENTATION"
+java = ["src/debug/java", "src/debug/kotlin"]
+res = ["src/debug/res"]
+
+[sourceSets.main]
+scope = "IMPLEMENTATION"
+assets = ["src/main/assets"]
+java = ["src/main/java", "src/main/kotlin"]
+res = ["src/main/res"]
+
+[sourceSets.release]
+scope = "IMPLEMENTATION"
+java = ["src/release/java", "src/release/kotlin"]
+res = ["src/release/res"]
+
+[dependencies]
+api = ["org.jetbrains.kotlin:kotlin-stdlib:2.4.0"]
+implementation = ["kotlin-stdlib"]
+compileOnly = ["androidx.compose.runtime:runtime:1.11.2", "androidx.compose.foundation:foundation:1.11.2", "androidx.compose.ui:ui:1.11.2", "androidx.compose.material3:material3:1.4.0", "androidx.compose.ui:ui-tooling-preview:1.11.2"]
+
+[android]
+namespace = "com.greenlionzz.writri"
+compileSdk = 36
+minSdk = 26
+targetSdk = 36
+manifest = "src/main/AndroidManifest.xml"
+versionCode = 1
+versionName = "1.0.0"
+isApplication = true
+manifestPlaceholders = []
+buildTypes = [{ name = "debug", debuggable = true, minifyEnabled = false, shrinkResources = false }, { name = "release", debuggable = false, minifyEnabled = false, shrinkResources = false, proguardFiles = ["proguard-android-optimize.txt", "proguard-rules.pro"] }]
+compose = true

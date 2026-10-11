@@ -1,0 +1,10 @@
+v=5
+g=2
+repos=https://repo1.maven.org/maven2,https://dl.google.com/android/maven2
+app|androidx.compose.foundation:foundation:1.11.2|
+app|androidx.compose.material3:material3:1.4.0|
+app|androidx.compose.runtime:runtime:1.11.2|
+app|androidx.compose.ui:ui-tooling-preview:1.11.2|
+app|androidx.compose.ui:ui:1.11.2|
+app|kotlin-stdlib|
+app|org.jetbrains.kotlin:kotlin-stdlib:2.4.0|
