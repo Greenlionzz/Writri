@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "id": "writri",
+      "name": "writri",
+      "root": "",
+      "buildSystem": "native",
+      "settings": {},
+      "modules": [
+        {
+          "id": "app",
+          "name": "app",
+          "dir": "app"
+        }
+      ],
+      "libraries": []
+    }
+  ]
+}
